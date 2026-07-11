@@ -90,7 +90,7 @@ export default function TeamPage() {
         />
         <Container className="relative z-10">
           <Reveal direction="up">
-            <p className="institutional-eyebrow">IQ Syndicate · The Team</p>
+            <p className="institutional-eyebrow">The Team</p>
           </Reveal>
           <Reveal delay={80}>
             <h1 className="mt-5 max-w-3xl text-charcoal">
