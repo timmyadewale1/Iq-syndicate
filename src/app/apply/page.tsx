@@ -53,7 +53,7 @@ const pathways = [
     label: "For Partners",
     headline: "Partner With we",
     description:
-      "we work with accelerators, bilateral agencies, multilateral institutions, and ecosystem organisations through referral agreements, TA co-delivery arrangements, and data and intelligence partnerships.",
+      "We work with accelerators, bilateral agencies, multilateral institutions, and ecosystem organisations through referral agreements, TA co-delivery arrangements, and data and intelligence partnerships.",
     tone: "bg-gold-dark text-white",
     iconTone: "bg-white/15 text-white",
     image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=1200&q=80",
@@ -189,14 +189,14 @@ export default function ApplyPage() {
           HERO - action-first: cream bg, headline,
           three large pathway cards as immediate anchors.
       ───────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-cream pb-10 pt-36 md:pt-44">
+      <section className="relative overflow-hidden bg-cream pb-5 pt-20 md:pt-24">
         <div
           className="pointer-events-none absolute -right-20 top-0 h-80 w-80 rounded-full bg-primary/6 blur-3xl"
           aria-hidden
         />
         <Container className="relative z-10">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="institutional-eyebrow">we · Get in Touch</p>
+            <p className="institutional-eyebrow">Get in Touch</p>
             <h1 className="mt-5 text-charcoal">Get in Touch</h1>
             <p className="mx-auto mt-6 max-w-xl text-[15.5px] leading-7 text-ink/72">
               Whether you are a climate founder, an institutional investor,
@@ -219,6 +219,7 @@ export default function ApplyPage() {
                         src={p.image}
                         alt={p.label}
                         fill
+                        sizes="(min-width: 768px) 40vw, 100vw"
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className={`absolute inset-0 ${p.imageTone}`} />
@@ -249,7 +250,7 @@ export default function ApplyPage() {
       {/* ─────────────────────────────────────────────
           PATHWAY 1 - FOUNDERS
       ───────────────────────────────────────────── */}
-      <section id="founders" className="scroll-mt-28 bg-white py-20 md:py-28">
+      <section id="founders" className="scroll-mt-28 bg-white py-10 md:py-14">
         <Container>
           <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
             {/* Left: intro + eligibility */}
@@ -264,7 +265,7 @@ export default function ApplyPage() {
                 Apply for the Technical Assistance Programme
               </h2>
               <p className="mt-5 text-[15px] leading-7 text-ink/74">
-                our TA programme is designed for indigenous
+                Our TA programme is designed for indigenous
                 African climate entrepreneurs at the pre-Series A stage
                 who are operating above the concept stage but below the
                 bankability threshold required for institutional capital.
@@ -337,7 +338,7 @@ export default function ApplyPage() {
       {/* ─────────────────────────────────────────────
           PATHWAY 2 - INVESTORS
       ───────────────────────────────────────────── */}
-      <section id="investors" className="scroll-mt-28 bg-forest py-20 text-white md:py-28">
+      <section id="investors" className="scroll-mt-28 bg-forest py-10 text-white md:py-14">
         <Container>
           <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
             {/* Left: intro */}
@@ -444,7 +445,7 @@ export default function ApplyPage() {
       {/* ─────────────────────────────────────────────
           PATHWAY 3 - PARTNERS
       ───────────────────────────────────────────── */}
-      <section id="partners" className="scroll-mt-28 bg-cream py-20 md:py-28">
+      <section id="partners" className="scroll-mt-28 bg-cream py-10 md:py-14">
         <Container>
           <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
             {/* Left: intro */}
@@ -456,10 +457,10 @@ export default function ApplyPage() {
                 <p className="institutional-eyebrow" style={{ color: "#8a6a45" }}>Pathway 03 - Partners</p>
               </div>
               <h2 className="mt-5 text-charcoal">
-                Partner With we
+                Partner With Us
               </h2>
               <p className="mt-5 text-[15px] leading-7 text-ink/74">
-                we work with accelerators, bilateral agencies,
+                We work with accelerators, bilateral agencies,
                 multilateral institutions, and ecosystem organisations
                 through referral agreements, TA co-delivery arrangements,
                 and data and intelligence partnerships.
@@ -531,7 +532,7 @@ export default function ApplyPage() {
       {/* ─────────────────────────────────────────────
           CONTACT INFO + LEGAL DISCLAIMER
       ───────────────────────────────────────────── */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-10 md:py-14">
         <Container>
           <div className="grid gap-10 md:grid-cols-2">
             <Reveal direction="left">

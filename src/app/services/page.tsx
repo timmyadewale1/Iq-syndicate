@@ -73,7 +73,7 @@ const aggregationSteps = [
   {
     n: "02",
     title: "Portfolio Construction",
-    body: "we select performing infrastructure projects based on complementary sectors and shared risk-return profiles.",
+    body: "We select performing infrastructure projects based on complementary sectors and shared risk-return profiles.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
     alt: "Data analytics and portfolio construction charts",
   },
@@ -148,6 +148,7 @@ export default function ServicesPage() {
             src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=2400&q=80"
             alt="Transmission towers and power infrastructure in Nigeria"
             fill
+            sizes="100vw"
             priority
             className="ken-burns object-cover"
           />
@@ -215,7 +216,7 @@ export default function ServicesPage() {
           SERVICE 01 - CLIMATE ADVISORY
           Text left · Image right · Three offering panels
       ───────────────────────────────────────────── */}
-      <section id="advisory" className="scroll-mt-24 bg-white py-20 md:py-28">
+      <section id="advisory" className="scroll-mt-24 bg-white py-10 md:py-14">
         <Container>
           <div className="grid items-start gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
             {/* Left: content */}
@@ -283,6 +284,7 @@ export default function ServicesPage() {
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&q=80"
                   alt="Strategic advisory session - climate project design and market intelligence"
                   fill
+                  sizes="(min-width: 768px) 28vw, 100vw"
                   className="object-cover"
                 />
                 <div className="photo-duotone-burgundy absolute inset-0" />
@@ -305,7 +307,7 @@ export default function ServicesPage() {
           SERVICE 02 - TECHNICAL ASSISTANCE
           Dark bg · Image left · Text right · Four TA modules
       ───────────────────────────────────────────── */}
-      <section id="technical-assistance" className="scroll-mt-24 bg-ink py-20 text-white md:py-28">
+      <section id="technical-assistance" className="scroll-mt-24 bg-ink py-10 text-white md:py-14">
         <Container>
           <div className="grid items-start gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
             {/* Left: image */}
@@ -315,6 +317,7 @@ export default function ServicesPage() {
                   src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400&q=80"
                   alt="Technical specialist conducting financial modelling and analysis"
                   fill
+                  sizes="(min-width: 768px) 28vw, 100vw"
                   className="object-cover"
                 />
                 <div className="photo-duotone-forest absolute inset-0" />
@@ -426,6 +429,7 @@ export default function ServicesPage() {
             src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=2400&q=80"
             alt="Solar panels - the clean energy infrastructure financed through the Mobilist Facility"
             fill
+            sizes="100vw"
             className="object-cover"
           />
           <div className="photo-duotone-gold absolute inset-0" />
@@ -468,7 +472,7 @@ export default function ServicesPage() {
 
           <Reveal delay={200} className="mt-10">
             <Link
-              href="/mobilist-facility"
+              href="/special-projects/mobilist-facility"
               className="group inline-flex items-center gap-2 bg-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink shadow-lg transition-all hover:-translate-y-0.5 hover:bg-gold-light"
             >
               View Full Facility Details
@@ -482,13 +486,13 @@ export default function ServicesPage() {
           SERVICE 04 - PORTFOLIO AGGREGATION
           Intro text · Six-step process with matched images
       ───────────────────────────────────────────── */}
-      <section id="aggregation" className="scroll-mt-24 bg-cream py-20 md:py-28">
+      <section id="aggregation" className="scroll-mt-24 bg-cream py-10 md:py-14">
         <Container>
           <Reveal className="mb-14 max-w-2xl">
             <p className="institutional-eyebrow">Service 04</p>
             <h2 className="mt-4 text-charcoal">Portfolio Aggregation</h2>
             <p className="mt-5 text-[15px] leading-7 text-ink/74">
-              we bridge the gap between small-scale climate
+              We bridge the gap between small-scale climate
               infrastructure projects and large institutional capital.
               We bundle individual performing projects into an
               investment-grade portfolio vehicle, then facilitate
@@ -514,6 +518,7 @@ export default function ServicesPage() {
                         src={step.image}
                         alt={step.alt}
                         fill
+                        sizes="(min-width: 768px) 35vw, 100vw"
                         className="object-cover"
                       />
                       <div className="absolute inset-0 bg-black/20" />
@@ -544,7 +549,7 @@ export default function ServicesPage() {
       {/* ─────────────────────────────────────────────
           CLOSING CTA - burgundy card (same pattern across site)
       ───────────────────────────────────────────── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-10 md:py-14">
         <Container>
           <Reveal>
             <div className="card-float flex flex-col items-start justify-between gap-10 rounded-3xl bg-primary p-10 shadow-2xl shadow-primary/20 md:flex-row md:items-end md:p-14">

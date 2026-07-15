@@ -60,7 +60,7 @@ const markets = [
     label: "SOM",
     title: "Serviceable Obtainable Market",
     value: "USD 30–50M / yr",
-    body: "we Years 1–5 capture: 20–30 ventures per cohort at $400K average annual engagement value.",
+    body: "We Years 1–5 capture: 20–30 ventures per cohort at $400K average annual engagement value.",
     tone: "bg-gold-dark text-white",
     iconTone: "bg-white/15 text-white",
     size: "w-full",
@@ -111,6 +111,7 @@ export default function MobilistFacilityPage() {
             src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=2400&q=80"
             alt="Solar infrastructure - the climate projects funded by the Mobilist Facility"
             fill
+            sizes="100vw"
             priority
             className="ken-burns object-cover"
           />
@@ -151,28 +152,17 @@ export default function MobilistFacilityPage() {
       {/* ─────────────────────────────────────────────
           FACILITY OVERVIEW
       ───────────────────────────────────────────── */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-10 md:py-14">
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <Reveal direction="left">
               <p className="institutional-eyebrow">Facility Overview</p>
-              <h2 className="mt-4 text-charcoal">
-                Philanthropic capital - returned, recycled, redeployed.
-              </h2>
-              <div className="mt-6 space-y-5 text-[15px] leading-7 text-ink/74">
+              <div className="mt-3 space-y-5 text-[15px] leading-7 text-ink/74">
                 <p>
-                  The Mobilist Facility is designed as a special-purpose
-                  investment vehicle that mobilises philanthropic capital
-                  - historically deployed as grants - blended with
-                  concessional instruments into well-prepared climate
-                  infrastructure projects with positive financial returns.
+                  The Mobilist Facility is designed as a special-purpose investment vehicle that mobilises philanthropic capital, historically deployed as grants; We blend these with concessional instruments into well-prepared climate infrastructure projects with positive financial and environmental returns.
                 </p>
                 <p>
-                  The facility's blended structure ensures that while
-                  concessional capital from DFIs is repaid at facility
-                  close, the philanthropic component is recycled back into
-                  the vehicle - ensuring financial sustainability and
-                  continuity for new ventures.
+                 The facility's blended structure ensures that while concessional capital from DFIs is repaid at facility close, the philanthropic component is recycled back into the vehicle, ensuring financial sustainability and continuity for new ventures.
                 </p>
               </div>
               <Link
@@ -190,6 +180,7 @@ export default function MobilistFacilityPage() {
                   src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80"
                   alt="Wind turbines - the clean energy infrastructure financed through the Mobilist Facility"
                   fill
+                  sizes="(min-width: 768px) 40vw, 100vw"
                   className="object-cover"
                 />
                 <div className="photo-duotone-gold absolute inset-0" />
@@ -208,7 +199,7 @@ export default function MobilistFacilityPage() {
       {/* ─────────────────────────────────────────────
           FACILITY TERMS - card grid, no raw table
       ───────────────────────────────────────────── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-10 md:py-14">
         <Container>
           <Reveal className="mb-12 max-w-xl">
             <p className="institutional-eyebrow">Facility Terms</p>
@@ -299,7 +290,7 @@ export default function MobilistFacilityPage() {
           FOR ANCHOR LPs
           Photo + eligibility criteria + CTA
       ───────────────────────────────────────────── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-10 md:py-14">
         <Container>
           <div className="grid items-start gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
             {/* Left: photo */}
@@ -309,6 +300,7 @@ export default function MobilistFacilityPage() {
                   src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80"
                   alt="Institutional investors in a meeting - anchor LP engagement"
                   fill
+                  sizes="(min-width: 768px) 40vw, 100vw"
                   className="object-cover"
                 />
                 <div className="photo-duotone-burgundy absolute inset-0" />
@@ -328,10 +320,7 @@ export default function MobilistFacilityPage() {
             {/* Right: criteria + CTA */}
             <Reveal direction="right">
               <p className="institutional-eyebrow">For Anchor LPs</p>
-              <h2 className="mt-4 text-charcoal">
-                Investing in the facility, not just the projects.
-              </h2>
-              <p className="mt-5 text-[15px] leading-7 text-ink/74">
+              <p className="mt-3 text-[15px] leading-7 text-ink/74">
                 The Mobilist Facility is actively seeking anchor LP
                 commitments from philanthropic foundations and development
                 finance institutions. Target anchor LPs are institutions
@@ -366,7 +355,7 @@ export default function MobilistFacilityPage() {
       {/* ─────────────────────────────────────────────
           CLOSING CTA - burgundy card
       ───────────────────────────────────────────── */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-10 md:py-14">
         <Container>
           <Reveal>
             <div className="card-float flex flex-col items-start justify-between gap-10 rounded-3xl bg-primary p-10 shadow-2xl shadow-primary/20 md:flex-row md:items-end md:p-14">

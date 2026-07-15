@@ -4,10 +4,12 @@ import { ArrowUpRight, Mail, MapPin } from "lucide-react";
 import Container from "@/components/ui/Container";
 
 const footerNav = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Investment Process", href: "/investment-process" },
-  { label: "Mobilist Facility", href: "/mobilist-facility" },
+  { label: "Mobilist Facility", href: "/special-projects/mobilist-facility" },
+  { label: "Special Projects", href: "/special-projects/africa-energy-market-intelligence" },
   { label: "Impact", href: "/impact" },
   { label: "Team", href: "/team" },
   { label: "Apply", href: "/apply" },
@@ -34,7 +36,7 @@ export default function SiteFooter() {
               {/* Logo */}
               <Image
                 src="/images/logo.png"
-                alt="we"
+                alt="IQ Syndicate"
                 width={500}
                 height={217}
                 className="h-11 w-auto object-contain brightness-0 invert"
@@ -202,7 +204,7 @@ export default function SiteFooter() {
       {/* Thin tri-colour brand gradient rule at very bottom */}
       <div
         className="h-[3px] w-full"
-        style={{ background: "linear-gradient(90deg, #6f1c28 0%, #b38a5b 50%, #1f3d2b 100%)" }}
+        style={{ backgroundImage: "linear-gradient(90deg, #6f1c28 0%, #b38a5b 50%, #1f3d2b 100%)" }}
       />
     </footer>
   );

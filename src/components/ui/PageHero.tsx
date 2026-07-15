@@ -19,7 +19,7 @@ export default function PageHero({
   return (
     <section className="grain relative flex min-h-[62vh] items-center justify-center overflow-hidden bg-ink md:min-h-[68vh]">
       <div className="absolute inset-0">
-        <Image src={image} alt={alt} fill priority className="ken-burns object-cover" />
+        <Image src={image} alt={alt} fill sizes="100vw" priority className="ken-burns object-cover" />
         <div className="hero-scrim absolute inset-0" />
       </div>
 

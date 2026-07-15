@@ -75,7 +75,6 @@ export default function StaircaseSteps({ steps }: { steps: Step[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [revealed, setRevealed]     = useState(0);
   const [hovered, setHovered]       = useState<number | null>(null);
-  const [popupReady, setPopupReady] = useState(false);
   const triggered = useRef(false);
 
   // Stagger card reveals on scroll into view
@@ -97,15 +96,6 @@ export default function StaircaseSteps({ steps }: { steps: Step[] }) {
     return () => observer.disconnect();
   }, [steps.length]);
 
-  // Tiny delay so the popup transitions in rather than snapping
-  useEffect(() => {
-    if (hovered !== null) {
-      const t = setTimeout(() => setPopupReady(true), 12);
-      return () => clearTimeout(t);
-    }
-    setPopupReady(false);
-  }, [hovered]);
-
   const dashOffset = PATH_LEN * (1 - revealed / COUNT);
 
   // Popup sits centred on the hovered card so it looks like a bigger
@@ -115,19 +105,19 @@ export default function StaircaseSteps({ steps }: { steps: Step[] }) {
     const popupLeft = left + (CARD_W - POPUP_W) / 2;   // negative → extends left of card
     const popupTop  = top  + (CARD_H - POPUP_H) / 2;   // negative → extends above card
 
-    return {
-      position: "absolute",
-      width:    POPUP_W,
-      height:   POPUP_H,
-      left:     popupLeft,
-      top:      popupTop,
-      zIndex:   200,
-      boxShadow: POPUP_SHADOWS[i],
-      opacity:   popupReady ? 1 : 0,
-      transform: popupReady ? "scale(1)" : "scale(0.88)",
-      transformOrigin: "center center",
-      transition: "opacity 0.28s ease, transform 0.32s cubic-bezier(0.22,1,0.36,1)",
-    };
+      return {
+        position: "absolute",
+        width:    POPUP_W,
+        height:   POPUP_H,
+        left:     popupLeft,
+        top:      popupTop,
+        zIndex:   200,
+        boxShadow: POPUP_SHADOWS[i],
+        opacity:   hovered === i ? 1 : 0,
+        transform: hovered === i ? "scale(1)" : "scale(0.92)",
+        transformOrigin: "center center",
+        transition: "opacity 0.28s ease, transform 0.32s cubic-bezier(0.22,1,0.36,1)",
+      };
   }
 
   return (

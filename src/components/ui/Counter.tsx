@@ -23,6 +23,10 @@ export default function Counter({
   const ref = useRef<HTMLSpanElement>(null);
   const [display, setDisplay] = useState(0);
   const started = useRef(false);
+  const formatted = new Intl.NumberFormat("en-US", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  }).format(display);
 
   useEffect(() => {
     const node = ref.current;
@@ -61,9 +65,9 @@ export default function Counter({
   }, [value, duration]);
 
   return (
-    <span ref={ref} className="tabular-nums">
+      <span ref={ref} className="tabular-nums">
       {prefix}
-      {display.toFixed(decimals)}
+      {formatted}
       {suffix}
     </span>
   );

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowUpRight,
   Landmark,
   TrendingDown,
   Users,
@@ -17,14 +16,13 @@ import {
 } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
-import PinnedStack from "@/components/ui/PinnedStack";
 import Counter from "@/components/ui/Counter";
 import HeroSlider, { type HeroSlide } from "@/components/ui/HeroSlider";
 
 export const metadata: Metadata = {
   title: "we",
   description:
-    "we bridge the financing gap between indigenous climate founders and institutional capital, through technical assistance, patient capital, and structured aggregation.",
+    "We bridge the financing gap between indigenous climate founders and institutional capital, through technical assistance, patient capital, and structured aggregation.",
 };
 
 const heroSlides: HeroSlide[] = [
@@ -34,7 +32,7 @@ const heroSlides: HeroSlide[] = [
     alt: "Solar infrastructure under construction in Nigeria",
     eyebrow: "Africa First Climate Finance",
     headlineLines: ["Enabling African-Led", "Climate Infrastructure to Scale"],
-    body: "we bridge the financing gap between indigenous climate founders and institutional capital, through technical assistance, patient capital, and structured aggregation.",
+    body: "We bridge the financing gap between indigenous climate founders and institutional capital, through technical assistance, patient capital, and structured aggregation.",
   },
   {
     image:
@@ -79,7 +77,7 @@ const stats = [
     icon: Users,
     value: null,
     prefix: "< ",
-    display: "< 1000",
+    display: "> 1000",
     label: "Active climate ventures in Africa, the majority pre-Series A",
     tone: "gold" as const,
     direction: "right" as const,
@@ -180,7 +178,7 @@ const audiences = [
     headline: "Invest in Africa's Climate Future",
     body: "The Mobilist Facility deploys philanthropic and concessional capital into well-prepared climate ventures generating measurable impact and risk-adjusted financial returns.",
     cta: "View the Mobilist Facility",
-    href: "/mobilist-facility",
+    href: "/special-projects/mobilist-facility",
     image:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
     tone: "forest" as const,
@@ -198,10 +196,10 @@ const audiences = [
 ];
 
 const impactMetrics = [
-  { icon: HomeIcon, value: "150,000", label: "Households with improved clean energy access" },
-  { icon: Cloud, value: "120,000", unit: " tCO₂e", label: "Greenhouse gas emissions avoided per year" },
-  { icon: Briefcase, value: "2,500", label: "Full-time equivalent jobs created" },
-  { icon: UserCheck, value: "40%+", label: "Women-led ventures in our portfolio" },
+  { icon: HomeIcon, value: 150000, label: "Households with improved clean energy access" },
+  { icon: Cloud, value: 800, unit: " tCO₂e", label: "Greenhouse gas emissions avoided per year" },
+  { icon: Briefcase, value: 2500, label: "Full-time equivalent jobs created" },
+  { icon: UserCheck, value: 40, display: "40%+", label: "Women-led ventures in our portfolio" },
 ];
 
 const pillarDirections: ("up" | "down" | "left" | "right")[] = [
@@ -227,7 +225,7 @@ export default function HomePage() {
 
       {/* ───────────────────────── THE FINANCING GAP ─────────────────────────
           No rules/borders, separation comes from card elevation. */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-10 md:py-14">
         <Container>
           <Reveal className="mx-auto max-w-3xl text-center">
             <p className="institutional-eyebrow">The Problem</p>
@@ -291,7 +289,7 @@ export default function HomePage() {
       {/* ───────────────────────── WHAT WE DO ─────────────────────────
           Cards assemble from alternating directions; card 04 tucks up
           against card 02 to close the masonry gap. */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-10 md:py-14">
         <Container>
           <Reveal className="mb-12 max-w-2xl">
             <p className="institutional-eyebrow">What We Do</p>
@@ -299,7 +297,7 @@ export default function HomePage() {
               Four Integrated Services. One End-to-End Pathway.
             </h2>
             <p className="mt-5 text-[15px] leading-7 text-ink/72">
-              we provide full-cycle support to climate
+              We provide full-cycle support to climate
               infrastructure projects. Each service addresses a specific
               failure point in the African climate finance ecosystem and
               creates a comprehensive pathway from founder identification
@@ -325,10 +323,12 @@ export default function HomePage() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(min-width: 768px) 40vw, 100vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   <div className={`absolute inset-0 ${toneClasses[service.tone]}`} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
+                  <div className="absolute inset-0 bg-black/14" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/86 via-black/34 to-transparent" />
                   <div className="absolute inset-0 flex flex-col justify-between p-7 md:p-8">
                     <span className="font-heading text-2xl text-white/70">
                       {service.n}
@@ -342,7 +342,7 @@ export default function HomePage() {
                       </p>
                       <span className="mt-4 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-white">
                         Learn More
-                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                        {/* <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" /> */}
                       </span>
                     </div>
                   </div>
@@ -355,7 +355,7 @@ export default function HomePage() {
 
       {/* ───────────────────────── INVESTMENT PHILOSOPHY ─────────────────────────
           Section pins while the four colored cards reveal one by one. */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-10 md:py-14">
         <Container>
           <Reveal className="mb-12 max-w-xl">
             <p className="institutional-eyebrow">Our Investment Philosophy</p>
@@ -370,32 +370,29 @@ export default function HomePage() {
             </p>
           </Reveal>
 
-          <PinnedStack directions={pillarDirections}>
-            {pillars.map((pillar) => {
+          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            {pillars.map((pillar, i) => {
               const Icon = pillar.icon;
               return (
-                <div
-                  key={pillar.title}
-                  className={`card-float h-full rounded-3xl p-8 shadow-xl shadow-black/15 md:p-10 ${pillar.tone}`}
-                >
-                  <div
-                    className={`flex h-14 w-14 items-center justify-center rounded-2xl ${pillar.iconTone}`}
-                  >
-                    <Icon className="h-7 w-7" strokeWidth={1.75} />
+                <Reveal key={pillar.title} direction={pillarDirections[i]} delay={i * 110}>
+                  <div className={`card-float h-full min-h-[300px] rounded-3xl p-8 shadow-xl shadow-black/15 md:min-h-[320px] md:p-10 ${pillar.tone}`}>
+                    <div className={`flex h-14 w-14 items-center justify-center rounded-2xl ${pillar.iconTone}`}>
+                      <Icon className="h-7 w-7" strokeWidth={1.75} />
+                    </div>
+                    <h3 className="mt-7 text-[1.55rem] leading-tight md:text-[1.8rem]">{pillar.title}</h3>
+                    <p className="mt-4 max-w-sm text-[14.5px] leading-7 opacity-82">
+                      {pillar.body}
+                    </p>
                   </div>
-                  <h3 className="mt-7 text-3xl">{pillar.title}</h3>
-                  <p className="mt-4 max-w-sm text-[14.5px] leading-7 opacity-82">
-                    {pillar.body}
-                  </p>
-                </div>
+                </Reveal>
               );
             })}
-          </PinnedStack>
+          </div>
         </Container>
       </section>
 
       {/* ───────────────────────── AUDIENCE PATHWAYS ───────────────────────── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-10 md:py-14">
         <Container>
           <Reveal className="mb-12 max-w-xl">
             <p className="institutional-eyebrow">Three Ways In</p>
@@ -415,9 +412,11 @@ export default function HomePage() {
                     src={a.image}
                     alt={a.headline}
                     fill
+                    sizes="(min-width: 768px) 40vw, 100vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <div className={`absolute inset-0 ${toneClasses[a.tone]}`} />
+                  <div className="absolute inset-0 bg-black/72 pointer-events-none" />
+                  <div className={`absolute inset-0 ${toneClasses[a.tone]} opacity-100`} />
                   <div className="absolute inset-0 flex flex-col justify-between p-7">
                     <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/75">
                       {a.label}
@@ -431,7 +430,6 @@ export default function HomePage() {
                       </p>
                       <span className="mt-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-white">
                         {a.cta}
-                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                       </span>
                     </div>
                   </div>
@@ -444,12 +442,13 @@ export default function HomePage() {
 
       {/* ───────────────────────── IMPACT NUMBERS ─────────────────────────
           Glass cards floating over the photo instead of flat overlay text. */}
-      <section className="relative overflow-hidden py-24 md:py-32">
+      <section className="relative overflow-hidden py-12 md:py-16">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=2400&q=80"
             alt="Aerial view of agricultural land in Nigeria"
             fill
+            sizes="100vw"
             className="object-cover"
           />
           <div className="photo-duotone-burgundy absolute inset-0" />
@@ -474,7 +473,14 @@ export default function HomePage() {
                       <Icon className="h-5 w-5" strokeWidth={1.75} />
                     </div>
                     <p className="mt-5 font-heading text-3xl text-white md:text-4xl">
-                      {metric.value}
+                      {metric.display ?? (
+                        <Counter
+                          value={Number(metric.value)}
+                          prefix={(metric as { prefix?: string }).prefix}
+                          suffix={(metric as { suffix?: string }).suffix}
+                          decimals={(metric as { decimals?: number }).decimals ?? 0}
+                        />
+                      )}
                       {metric.unit && (
                         <span className="text-lg text-gold-light md:text-xl">
                           {metric.unit}
@@ -494,7 +500,7 @@ export default function HomePage() {
 
       {/* ───────────────────────── PRE-FOOTER CTA ─────────────────────────
           A single burgundy card, not a full-bleed band. */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-10 md:py-14">
         <Container>
           <Reveal>
             <div className="card-float flex flex-col items-start justify-between gap-10 rounded-3xl bg-primary p-10 shadow-2xl shadow-primary/20 md:flex-row md:items-end md:p-14">
@@ -512,7 +518,7 @@ export default function HomePage() {
                   className="group inline-flex items-center gap-2 bg-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary shadow-lg transition-all hover:-translate-y-0.5 hover:bg-gold-light"
                 >
                   Apply Now
-                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  {/* <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" /> */}
                 </Link>
                 <Link
                   href="/apply"

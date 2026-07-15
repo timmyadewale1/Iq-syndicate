@@ -165,7 +165,7 @@ export default function AboutPage() {
       {/* ───────────────────────── HERO ─────────────────────────
           Bespoke split layout for this page - text on a warm surface,
           a floating framed photograph instead of a full-bleed image. */}
-      <section className="relative overflow-hidden bg-cream pb-20 pt-36 md:pb-28 md:pt-44">
+      <section className="relative overflow-hidden bg-cream pb-10 pt-24 md:pb-14 md:pt-28">
         <div
           className="pointer-events-none absolute -right-32 -top-32 h-[480px] w-[480px] rounded-full bg-gold-light/25 blur-3xl"
           aria-hidden
@@ -203,12 +203,13 @@ export default function AboutPage() {
               </div>
             </Reveal>
 
-            <Reveal direction="right" className="relative">
-              <div className="card-float relative h-[360px] overflow-hidden rounded-[2.5rem] shadow-2xl shadow-black/20 md:h-[440px]">
+            <Reveal direction="right" className="relative mt-6 md:mt-10 lg:mt-12">
+              <div className="card-float relative h-[320px] overflow-hidden rounded-[2.5rem] shadow-2xl shadow-black/20 md:h-[420px]">
                 <Image
                   src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=1600&q=80"
                   alt="Solar infrastructure under construction in Nigeria"
                   fill
+                  sizes="100vw"
                   priority
                   className="object-cover"
                 />
@@ -233,7 +234,7 @@ export default function AboutPage() {
       </section>
 
       {/* ───────────────────────── MISSION & VISION ───────────────────────── */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-10 md:py-14">
         <Container>
           <div className="grid gap-6 md:grid-cols-2">
             <Reveal direction="left">
@@ -284,19 +285,25 @@ export default function AboutPage() {
       </section>
 
       {/* ───────────────────────── THE PROBLEM WE SOLVE ───────────────────────── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-10 md:py-14">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:gap-16">
             <Reveal direction="left">
               <p className="institutional-eyebrow">The Problem We Solve</p>
-              <h2 className="mt-4 max-w-sm text-charcoal">
-                A Market Failure by Design
-              </h2>
-              <div className="card-float relative mt-8 hidden h-[320px] overflow-hidden rounded-2xl shadow-xl shadow-black/15 lg:block">
+              <div className="mt-4 flex flex-col gap-3 lg:flex-row lg:items-start lg:gap-10">
+                <h2 className="max-w-[15rem] text-charcoal">
+                  A Market Failure by Design
+                </h2>
+                <p className="max-w-[34rem] text-[15px] leading-7 text-ink/74">
+                  The African climate finance landscape is constrained by a critical shortage of fit-for-purpose capital that addresses the financing needs of locally led climate infrastructure projects. Although hundreds of billions of dollars are committed globally to climate finance each year, the overwhelming majority of these resources are directed toward large-scale infrastructure projects and foreign-led developers that offer the revenue certainty, institutional track record, and risk profile preferred by conventional investors. As a result, small-scale, locally led climate infrastructure projects, despite delivering essential climate solutions and serving underserved communities, remain systematically underserved by existing financing mechanisms.
+                </p>
+              </div>
+              <div className="card-float relative mt-10 hidden h-[320px] overflow-hidden rounded-2xl shadow-xl shadow-black/15 lg:block">
                 <Image
                   src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1000&q=80"
                   alt="Indigenous climate entrepreneur at work"
                   fill
+                  sizes="100vw"
                   className="object-cover"
                 />
                 <div className="photo-duotone-forest absolute inset-0" />
@@ -305,7 +312,7 @@ export default function AboutPage() {
 
             <Reveal direction="right" className="space-y-6 text-[15px] leading-7 text-ink/76">
               <p>
-                The African climate finance landscape suffers from a shortage of capital that is fit for purpose. Globally, hundreds of billions of dollars are committed annually to climate finance, yet the overwhelming majority of this capital flows to large-scale infrastructure projects and foreign-led developers who present the revenue certainty, institutional track records, and risk profiles that conventional investors are designed to accommodate.
+                This structural mismatch prevents capital from reaching enterprises that are well positioned to address local climate and energy challenges. The lack of appropriately structured financing, combined with limited access to technical assistance, constrains product innovation, business growth, operational scalability, and long-term sustainability, even where strong market demand already exists. Ultimately, this financing gap slows the deployment of climate infrastructure, limits access to affordable clean energy and other essential climate solutions, suppresses local job creation and development, and leaves vulnerable communities disproportionately exposed to the impacts of climate change.
               </p>
             </Reveal>
           </div>
@@ -315,22 +322,21 @@ export default function AboutPage() {
       {/* ───────────────────────── PULL QUOTE ─────────────────────────
           A pill/semi-circular panel paired with a floating, gently
           animated continent illustration. */}
-      <section className="bg-primary py-24 text-white md:py-32">
+      <section className="bg-primary py-10 text-white md:py-14">
         <Container>
-          <div className="grid items-center gap-12 md:grid-cols-[1.3fr_0.7fr] md:gap-4">
+          <div className="grid items-center gap-8 md:grid-cols-[1.3fr_0.7fr] md:gap-4">
             <Reveal direction="left">
-              <div className="card-float relative rounded-r-3xl rounded-l-[999px] bg-primary-deep p-10 pl-12 shadow-2xl shadow-black/20 md:p-14 md:pl-20">
-                <Quote className="h-9 w-9 text-gold-light" strokeWidth={1.5} />
-                <p className="mt-6 max-w-lg font-heading text-2xl leading-[1.3] text-white md:text-3xl">
-                  Africa does not have a liquidity problem in climate
-                  finance. It has a risk valuation problem. We design instruments that deal with risk, not just liquidity.
+              <div className="card-float relative overflow-hidden rounded-[2rem] bg-primary-deep p-8 pl-8 shadow-2xl shadow-black/20 sm:p-10 sm:pl-10 md:rounded-r-3xl md:rounded-l-[999px] md:p-12 md:pl-14">
+                <Quote className="h-8 w-8 text-gold-light sm:h-9 sm:w-9" strokeWidth={1.5} />
+                <p className="mt-5 w-full max-w-full font-heading text-[1.05rem] leading-[1.45] text-white sm:text-[1.2rem] md:mt-6 md:text-[1.7rem] md:leading-[1.4]">
+                  Africa does not have a liquidity problem in climate finance. It has a risk valuation problem. We design instruments that deal with risk, not just liquidity.
                 </p>
               </div>
             </Reveal>
 
-            {/* <Reveal direction="right" className="mx-auto hidden h-[260px] w-[240px] md:block">
+            <Reveal direction="right" className="mx-auto mt-8 block h-[220px] w-[220px] md:mt-0 md:h-[260px] md:w-[240px]">
               <AfricaMap className="h-full w-full" />
-            </Reveal> */}
+            </Reveal>
           </div>
         </Container>
       </section>
@@ -338,14 +344,11 @@ export default function AboutPage() {
       {/* ───────────────────────── OUR MODEL ─────────────────────────
           A compact connected timeline - every stage stays visible at
           once, no scroll-pinning, no overlap with neighboring sections. */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-10 md:py-14">
         <Container>
           <Reveal className="mb-16 max-w-2xl">
             <p className="institutional-eyebrow">Core Service Areas</p>
-            <h2 className="mt-4 text-charcoal">
-              Five sequential stages. One bridge institution.
-            </h2>
-            <p className="mt-5 text-[15px] leading-7 text-ink/72">
+            <p className="mt-3 text-[15px] leading-7 text-ink/72">
               We do not simply deploy capital. We help build a replicable, self-sustaining ecosystem for Africa-owned climate infrastructure, with depth and inclusion at its centre
             </p>
           </Reveal>
@@ -442,7 +445,7 @@ export default function AboutPage() {
       </section> */}
 
       {/* ───────────────────────── THEORY OF CHANGE ───────────────────────── */}
-      <section className="relative overflow-hidden bg-forest py-20 text-white md:py-28">
+      <section className="relative overflow-hidden bg-forest py-10 text-white md:py-14">
         <div
           className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gold-light/10 blur-3xl"
           aria-hidden
@@ -526,7 +529,7 @@ export default function AboutPage() {
       </section> */}
 
       {/* ───────────────────────── CLOSING CTA ───────────────────────── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-10 md:py-14">
         <Container>
           <Reveal>
             <div className="card-float flex flex-col items-start justify-between gap-10 rounded-3xl bg-primary p-10 shadow-2xl shadow-primary/20 md:flex-row md:items-end md:p-14">

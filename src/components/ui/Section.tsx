@@ -12,8 +12,8 @@ export default function Section({
   return (
     <section
       className={`
-        py-24
-        md:py-32
+        py-12
+        md:py-16
         ${className}
       `}
     >

@@ -23,12 +23,11 @@ import {
 } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
-import StaircaseSteps from "@/components/ui/StaircaseSteps";
 
 export const metadata: Metadata = {
   title: "Investment Process",
   description:
-    "our seven-step investment process progressively reduces risk while building venture value - creating a de-risked, investment-grade asset ready for commercial capital at exit.",
+    "our seven-step investment process progressively reduces risk while building venture value, creating a de-risked, investment-grade asset ready for commercial capital at exit.",
 };
 
 const steps = [
@@ -44,7 +43,7 @@ const steps = [
   {
     n: "02",
     title: "Project Scoping & Gap Analysis",
-    body: "A deep-dive gap analysis assesses bankability across six technical assistance modules. The origination scoring matrix is applied, weighting climate impact materiality, founder quality, market opportunity, TA tractability, revenue traction, and ESG risk profile.",
+    body: "A deep-dive gap analysis assesses bankability across six technical assistance modules.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
     alt: "Data analysis and scoring matrix - project gap analysis",
     imageSide: "left" as const,
@@ -80,7 +79,7 @@ const steps = [
   {
     n: "06",
     title: "Capital Deployment",
-    body: "A debt instrument is deployed per annum, with ticket sizes of $400K and a 5-10 year tenor. TA conversion rights to equity are retained, providing we with upside participation. Portfolio monitoring is activated immediately.",
+    body: "A debt instrument is deployed, with ticket sizes of $400K and a 5-10 year tenor. TA conversion rights to equity are retained, providing we with upside participation. Portfolio monitoring is activated immediately.",
     image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80",
     alt: "Clean energy infrastructure funded by deployed capital - solar and wind installation",
     imageSide: "left" as const,
@@ -90,7 +89,7 @@ const steps = [
     n: "07",
     title: "Monitoring & Exit",
     body: "Quarterly KPI reviews track financial performance, milestone completion, and impact metrics. Exit is achieved through full debt repayment, institutional refinancing, or direct sales.",
-    image: "https://images.unsplash.com/photo-1611273426858-450fa1a1f08d?w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80",
     alt: "Portfolio performance monitoring and impact tracking dashboard",
     imageSide: "right" as const,
     tone: "photo-duotone-forest",
@@ -200,6 +199,7 @@ export default function InvestmentProcessPage() {
             src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=2400&q=80"
             alt="Aerial view of agricultural land representing the investment journey across Africa"
             fill
+            sizes="100vw"
             priority
             className="ken-burns object-cover"
           />
@@ -260,12 +260,11 @@ export default function InvestmentProcessPage() {
           Desktop: staircase with images + climbing burgundy line.
           Mobile: alternating image/text cards (original layout).
       ───────────────────────────────────────────── */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-10 md:py-14">
         <Container>
           <Reveal className="mb-16 max-w-2xl">
             <p className="institutional-eyebrow">The Process</p>
-            <h2 className="mt-4 text-charcoal">The Seven-Step Process</h2>
-            <p className="mt-5 text-[15px] leading-7 text-ink/72">
+            <p className="mt-3 text-[15px] leading-7 text-ink/72">
               Every venture that enters our process moves
               through the same seven stages. Each stage has defined
               inputs, outputs, and decision outcomes, ensuring only
@@ -273,57 +272,44 @@ export default function InvestmentProcessPage() {
             </p>
           </Reveal>
 
-          {/* ── Desktop: staircase component ── */}
-          <Reveal direction="up">
-            <div className="hidden md:flex md:justify-center md:overflow-visible">
-              <StaircaseSteps steps={steps} />
-            </div>
-          </Reveal>
-
-          {/* ── Mobile: alternating image/text cards ── */}
-          <div className="space-y-6 md:hidden">
-            {steps.map((step, i) => {
-              const isRight = step.imageSide === "right";
-              return (
-                <Reveal
-                  key={step.n}
-                  direction={isRight ? "left" : "right"}
-                  delay={60}
-                >
-                  <div className="card-float overflow-hidden rounded-2xl bg-white shadow-xl shadow-black/12 ring-1 ring-border/60 transition-shadow hover:shadow-2xl hover:shadow-primary/15">
-                    {/* Image always on top on mobile */}
-                    <div className="relative h-52">
-                      <Image
-                        src={step.image}
-                        alt={step.alt}
-                        fill
-                        className="object-cover"
-                      />
-                      <div className={`absolute inset-0 ${step.tone}`} />
-                      <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent" />
-                      <div className="absolute left-5 top-5 rounded-full bg-black/40 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
-                        Step {step.n}
-                      </div>
-                    </div>
-                    {/* Text */}
-                    <div className="flex flex-col justify-center p-7">
-                      <div className="flex items-center gap-4">
-                        <span className="font-heading text-4xl text-primary/20">
-                          {step.n}
-                        </span>
-                        <div className="h-px flex-1 bg-border" />
-                      </div>
-                      <h3 className="mt-3 text-2xl text-charcoal">
-                        {step.title}
-                      </h3>
-                      <p className="mt-3 text-[14.5px] leading-7 text-ink/70">
-                        {step.body}
-                      </p>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {steps.map((step, i) => (
+              <Reveal
+                key={step.n}
+                direction={i % 2 === 0 ? "left" : "right"}
+                delay={i * 70}
+              >
+                <div className="group h-full overflow-hidden rounded-[2.25rem] bg-white shadow-xl shadow-black/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+                  <div className="relative h-44 overflow-hidden">
+                    <Image
+                      src={step.image}
+                      alt={step.alt}
+                      fill
+                      sizes="(min-width: 1280px) 22vw, (min-width: 768px) 46vw, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                    <div className={`absolute inset-0 ${step.tone}`} />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/18 to-black/68" />
+                    <div className="absolute left-4 top-4 rounded-full bg-black/42 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+                      Step {step.n}
                     </div>
                   </div>
-                </Reveal>
-              );
-            })}
+                  <div className="p-6">
+                    <div className="flex items-center gap-3">
+                      <span className="font-heading text-3xl text-primary/20">
+                        {step.n}
+                      </span>
+                    </div>
+                    <h3 className="mt-3 text-[1.08rem] leading-tight text-charcoal">
+                      {step.title}
+                    </h3>
+                    <p className="mt-3 text-[13.5px] leading-6 text-ink/68">
+                      {step.body}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </Container>
       </section>
@@ -333,7 +319,7 @@ export default function InvestmentProcessPage() {
           Three colored cards, each representing one instrument.
           Forest background so it reads as a distinct chapter.
       ───────────────────────────────────────────── */}
-      <section className="bg-forest py-20 text-white md:py-28">
+      <section className="bg-forest py-10 text-white md:py-14">
         <Container>
           <Reveal className="mb-12 max-w-2xl">
             <p className="eyebrow-on-dark">Instrument Design</p>
@@ -380,7 +366,7 @@ export default function InvestmentProcessPage() {
           ELIGIBILITY - WHO WE WORK WITH
           Three sub-sections: Sectors · Founder Profile · Revenue Stage
       ───────────────────────────────────────────── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-10 md:py-14">
         <Container>
           <Reveal className="mb-5 max-w-2xl">
             <p className="institutional-eyebrow">Eligibility Criteria</p>
@@ -434,6 +420,7 @@ export default function InvestmentProcessPage() {
                     src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1000&q=80"
                     alt="Indigenous African climate entrepreneurs building local ventures"
                     fill
+                    sizes="100vw"
                     className="object-cover"
                   />
                   <div className="photo-duotone-burgundy absolute inset-0" />
@@ -465,9 +452,10 @@ export default function InvestmentProcessPage() {
               <div className="card-float h-full overflow-hidden rounded-3xl bg-white shadow-lg shadow-black/8">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1611273426858-450fa1a1f08d?w=1000&q=80"
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&q=80"
                     alt="Revenue-generating climate infrastructure - grid-scale solar energy"
                     fill
+                    sizes="100vw"
                     className="object-cover"
                   />
                   <div className="photo-duotone-forest absolute inset-0" />
@@ -521,7 +509,7 @@ export default function InvestmentProcessPage() {
       {/* ─────────────────────────────────────────────
           CLOSING CTA - same burgundy card across all pages
       ───────────────────────────────────────────── */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-10 md:py-14">
         <Container>
           <Reveal>
             <div className="card-float flex flex-col items-start justify-between gap-10 rounded-3xl bg-primary p-10 shadow-2xl shadow-primary/20 md:flex-row md:items-end md:p-14">

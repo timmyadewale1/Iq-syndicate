@@ -46,6 +46,7 @@ export default function HeroSlider({
               src={slide.image}
               alt={slide.alt}
               fill
+              sizes="100vw"
               priority={i === 0}
               className={i === active ? "ken-burns object-cover" : "object-cover"}
             />

@@ -165,17 +165,17 @@ figcaption {
 }
 
 .photo-duotone-burgundy {
-  background: linear-gradient(160deg, rgba(69, 17, 26, 0.82), rgba(69, 17, 26, 0.34));
+  background: linear-gradient(160deg, rgba(69, 17, 26, 0.92), rgba(69, 17, 26, 0.60));
   mix-blend-mode: multiply;
 }
 
 .photo-duotone-forest {
-  background: linear-gradient(160deg, rgba(18, 36, 24, 0.82), rgba(18, 36, 24, 0.32));
+  background: linear-gradient(160deg, rgba(18, 36, 24, 0.92), rgba(18, 36, 24, 0.55));
   mix-blend-mode: multiply;
 }
 
 .photo-duotone-gold {
-  background: linear-gradient(160deg, rgba(138, 106, 69, 0.78), rgba(138, 106, 69, 0.28));
+  background: linear-gradient(160deg, rgba(138, 106, 69, 0.90), rgba(138, 106, 69, 0.55));
   mix-blend-mode: multiply;
 }
 
@@ -242,12 +242,12 @@ figcaption {
 @keyframes pulse-dot {
   0%,
   100% {
-    transform: scale(1);
-    opacity: 1;
+    transform: scale(0.98);
+    opacity: 0.96;
   }
   50% {
-    transform: scale(1.4);
-    opacity: 0.6;
+    transform: scale(1.06);
+    opacity: 1;
   }
 }
 

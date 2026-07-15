@@ -37,7 +37,7 @@ const sdgs = [
   {
     n: "7",
     title: "Affordable & Clean Energy",
-    body: "we expand access to off-grid solar, mini-grids, and clean cooking for unserved households across Nigeria. Portfolio ventures directly displace kerosene and biomass, reducing household energy costs and health impacts while contributing to Nigeria's national target of 50% renewable power mix by 2030.",
+    body: "We work in accordance with SDG 7 and aim to ensure universal access to affordable, reliable, sustainable, and modern energy by 2030. Our key targets include ensuring access to electricity and clean cooking, increasing the share of renewable energy, and doubling energy efficiency improvements.",
     icon: Zap,
     // Official SDG 7 colour - yellow; use dark text
     sdgColor: "#FCC30B",
@@ -48,7 +48,7 @@ const sdgs = [
   {
     n: "8",
     title: "Decent Work & Economic Growth",
-    body: "The portfolio generates full-time employment in climate sectors and supports indigenous-led enterprise development in underserved geographies. At least 40% of portfolio ventures are women-led, reflecting our commitment to inclusive economic participation.",
+    body: "Sustainable Development Goal 8 (SDG 8) is the UN’s blueprint to promote sustained, inclusive and sustainable economic growth, full and productive employment, and decent work for all. We are aligned with the goal as our work focuses on eradicating poverty by ensuring quality jobs, fair wages, safe workplaces, and the eradication of forced and child labor.",
     icon: Briefcase,
     // Official SDG 8 colour - wine/maroon; white text
     sdgColor: "#A21942",
@@ -59,7 +59,7 @@ const sdgs = [
   {
     n: "13",
     title: "Climate Action",
-    body: "Portfolio ventures reduce greenhouse gas emissions through mitigation projects and strengthen community-level climate resilience through adaptation ventures. our investment activity is directly aligned with Nigeria's NDC 3.0 targets - a 29% GHG reduction by 2030 and 32% by 2035 relative to business-as-usual.",
+    body: "We are aligned with Sustainable Development Goal 13 (SDG 13) which calls for urgent, global action to combat climate change and its impacts. We focus on mitigating greenhouse gas emissions, building resilience against climate-related disasters, mobilizing climate finance, and integrating climate awareness through our advisory and technical assistance into national policies and education.",
     icon: Leaf,
     // Official SDG 13 colour - forest green; white text
     sdgColor: "#3F7E44",
@@ -70,7 +70,7 @@ const sdgs = [
   {
     n: "10",
     title: "Reduced Inequalities",
-    body: "we direct capital specifically to indigenous African founders and underserved communities excluded from mainstream finance. The firm's geographic scope prioritises regions with the greatest energy access deficit and climate vulnerability.",
+    body: "Sustainable Development Goal 10 aims to reduce inequalities within and among countries by 2030. Our work aligns with the goal as we focus on empowering marginalized groups, eliminating discriminatory practices, protecting labor incomes, and ensuring a greater voice for Africa as a developing nations in global decision-making. We align with the key targets of SDG 10 which include reducing income inequality for the bottom 40%, ensuring universal social and economic inclusion, and promoting fair policies.",
     icon: Users,
     // Official SDG 10 colour - magenta; white text
     sdgColor: "#DD1367",
@@ -153,7 +153,7 @@ const standards = [
     icon: Globe2,
     label: "UN PRI",
     title: "UN Principles for Responsible Investment",
-    body: "we integrate ESG considerations into investment analysis, exercises active ownership, seeks appropriate ESG disclosure from portfolio ventures, and reports annually on ESG activities to Limited Partners.",
+    body: "We integrate ESG considerations into investment analysis, exercises active ownership, seeks appropriate ESG disclosure from portfolio ventures, and reports annually on ESG activities to Limited Partners.",
     image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80",
     imageTone: "photo-duotone-gold",
   },
@@ -212,6 +212,7 @@ export default function ImpactPage() {
             src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=2400&q=80"
             alt="Solar infrastructure in Nigeria - our climate impact in action"
             fill
+            sizes="100vw"
             priority
             className="ken-burns object-cover"
           />
@@ -246,21 +247,35 @@ export default function ImpactPage() {
           Each SDG gets a photo card + full description.
           Two wide cards on top (01, 02), two on bottom.
       ───────────────────────────────────────────── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-10 md:py-14">
         <Container>
-          <div className="grid gap-2 sm:gap-2 md:gap-3 lg:gap-2 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {sdgs.map((sdg, i) => {
               const dirs = ["left", "right", "left", "right"] as const;
+              const Icon = sdg.icon;
               return (
                 <Reveal key={sdg.n} direction={dirs[i]} delay={i * 90}>
-                  <div className="card-float mx-auto h-full w-full max-w-[220px] overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/10 md:max-w-[140px] lg:max-w-[120px]">
-                    <div className="relative aspect-square overflow-hidden bg-cream">
+                  <div className="card-float h-full overflow-hidden rounded-3xl bg-white shadow-lg shadow-black/10">
+                    <div className="relative aspect-[4/3] overflow-hidden bg-cream">
                       <Image
                         src={sdg.image}
                         alt={sdg.title}
                         fill
-                        className="object-contain p-2 sm:p-3 md:p-2"
+                        sizes="(min-width: 1024px) 20vw, 50vw"
+                        className="object-contain p-3 sm:p-4"
                       />
+                    </div>
+                    <div className="p-5">
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl" style={{ backgroundColor: sdg.sdgColor, color: sdg.textDark ? "#111111" : "#ffffff" }}>
+                          <Icon className="h-5 w-5" strokeWidth={1.75} />
+                        </div>
+                        <div>
+                          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-ink/45">SDG {sdg.n}</p>
+                          <p className="font-heading text-[1.05rem] leading-tight text-charcoal">{sdg.title}</p>
+                        </div>
+                      </div>
+                      <p className="mt-4 text-[13px] leading-6 text-ink/68">{sdg.body}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -275,7 +290,7 @@ export default function ImpactPage() {
           Five metric cards, full-width alternating
           colors, counter animation on the numbers.
       ───────────────────────────────────────────── */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-10 md:py-14">
         <Container>
           <Reveal className="mb-12 max-w-xl">
             <p className="institutional-eyebrow">Primary Impact Targets</p>
@@ -329,7 +344,7 @@ export default function ImpactPage() {
           Photo + description for each of the four
           frameworks, in a 2×2 grid.
       ───────────────────────────────────────────── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-10 md:py-14">
         <Container>
           <Reveal className="mb-12 max-w-xl">
             <p className="institutional-eyebrow">Our Impact Standards</p>
@@ -338,48 +353,75 @@ export default function ImpactPage() {
             </h2>
           </Reveal>
 
-          <div className="mx-auto max-w-full space-y-3">
-            <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3 lg:gap-1">
-              {standards.map((std, i) => {
-                const Icon = std.icon;
-                const dirs = ["left", "right", "left"] as const;
-                return (
-                  <Reveal
-                    key={std.label}
-                    direction={dirs[i % 3]}
-                    delay={i * 80}
-                  >
-                    <div className="card-float mx-auto h-full w-full max-w-[230px] overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/8 sm:max-w-[250px] lg:max-w-[310px]">
-                      <div className="relative h-40">
-                        <Image
-                          src={std.image}
-                          alt={std.title}
-                          fill
-                          className="object-cover"
-                        />
-                        <div className={`absolute inset-0 ${std.imageTone}`} />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
-                        <div className="absolute bottom-0 left-0 right-0 flex items-center gap-3 p-5">
-                          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 backdrop-blur-sm">
-                            <Icon className="h-4.5 w-4.5 text-white" strokeWidth={1.75} />
-                          </div>
-                          <div>
-                            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/65">
-                              Framework
-                            </p>
-                            <p className="font-heading text-lg text-white">{std.label}</p>
-                          </div>
+          <div className="space-y-4 lg:hidden">
+            {standards.map((std, i) => {
+              const Icon = std.icon;
+              return (
+                <Reveal key={std.label} direction={i % 2 === 0 ? "left" : "right"} delay={i * 80}>
+                  <div className="overflow-hidden rounded-[2rem] border border-border bg-white shadow-lg shadow-black/8">
+                    <div className="relative h-44">
+                      <Image
+                        src={std.image}
+                        alt={std.title}
+                        fill
+                        sizes="100vw"
+                        className="object-cover"
+                      />
+                      <div className={`absolute inset-0 ${std.imageTone}`} />
+                      <div className="absolute inset-0 bg-black/45 transition-opacity duration-300 group-hover:bg-black/75" />
+                      <div className="absolute bottom-0 left-0 right-0 flex items-center gap-3 p-5 text-white">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 backdrop-blur-sm">
+                          <Icon className="h-4.5 w-4.5 text-white" strokeWidth={1.75} />
+                        </div>
+                        <div>
+                          <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/65">
+                            Framework
+                          </p>
+                          <p className="font-heading text-lg text-white">{std.label}</p>
                         </div>
                       </div>
-                      <div className="p-6">
-                        <p className="font-semibold text-charcoal">{std.title}</p>
-                        <p className="mt-3 text-[13.5px] leading-6 text-ink/68">{std.body}</p>
-                      </div>
                     </div>
-                  </Reveal>
-                );
-              })}
-            </div>
+                    <div className="p-6">
+                      <p className="font-semibold text-charcoal">{std.title}</p>
+                      <p className="mt-3 text-[13.5px] leading-6 text-ink/68">{std.body}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+
+            <div className="hidden gap-4 lg:grid lg:grid-cols-3">
+              {standards.map((std, i) => {
+                const Icon = std.icon;
+                return (
+                  <Reveal key={std.label} direction={i % 3 === 0 ? "left" : i % 3 === 1 ? "up" : "right"} delay={i * 80}>
+                  <div className="group relative h-[420px] overflow-hidden rounded-[2.25rem] shadow-xl shadow-black/10">
+                    <Image
+                      src={std.image}
+                      alt={std.title}
+                      fill
+                      sizes="33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                    <div className={`absolute inset-0 ${std.imageTone}`} />
+                    <div className="absolute inset-0 bg-black/55 transition-opacity duration-300 group-hover:bg-black/82" />
+                    <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/15 backdrop-blur-sm">
+                          <Icon className="h-5 w-5 text-white" strokeWidth={1.75} />
+                        </div>
+                        <p className="font-heading text-lg text-white">{std.label}</p>
+                      </div>
+                      <p className="mt-4 text-[14px] font-semibold">{std.title}</p>
+                      <p className="mt-2 max-h-0 overflow-hidden text-[13.5px] leading-6 text-white/0 transition-all duration-300 group-hover:max-h-40 group-hover:text-white/88">
+                        {std.body}
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
           </div>
         </Container>
       </section>
@@ -446,7 +488,7 @@ export default function ImpactPage() {
       {/* ─────────────────────────────────────────────
           CLOSING CTA
       ───────────────────────────────────────────── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-10 md:py-14">
         <Container>
           <Reveal>
             <div className="card-float flex flex-col items-start justify-between gap-10 rounded-3xl bg-primary p-10 shadow-2xl shadow-primary/20 md:flex-row md:items-end md:p-14">
