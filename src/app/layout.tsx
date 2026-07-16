@@ -15,7 +15,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://iqsyndicate.vercel.app"),
+  metadataBase: new URL("https://iqsyndicate.org"),
   icons: {
     icon: "/images/favicon.png",
   },

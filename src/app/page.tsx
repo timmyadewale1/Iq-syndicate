@@ -20,7 +20,7 @@ import Counter from "@/components/ui/Counter";
 import HeroSlider, { type HeroSlide } from "@/components/ui/HeroSlider";
 
 export const metadata: Metadata = {
-  title: "we",
+  title: "Home",
   description:
     "We bridge the financing gap between indigenous climate founders and institutional capital, through technical assistance, patient capital, and structured aggregation.",
 };
