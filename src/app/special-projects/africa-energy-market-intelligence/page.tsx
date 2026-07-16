@@ -26,17 +26,17 @@ const deliverables = [
 ];
 
 const markets = [
-  { name: "Nigeria",  desc: "Largest economy; active pipeline; energy transition leadership" },
-  { name: "Uganda",   desc: "High energy access gap; strong donor engagement; growing solar market" },
-  { name: "Tanzania", desc: "Significant rural electrification need; Swahili-speaking market" },
-  { name: "Ethiopia", desc: "Large population; Amharic data coverage; hydropower transition" },
+  { name: "Nigeria",  desc: "Largest economy, active pipeline, energy transition leadership" },
+  { name: "Uganda",   desc: "High energy access gap, strong donor engagement; growing solar market" },
+  { name: "Tanzania", desc: "Significant rural electrification need." },
+  { name: "Ethiopia", desc: "Large population, Amharic data coverage, hydropower transition" },
 ];
 
 const stats = [
   { value: "200+",   label: "Data sources monitored continuously" },
   { value: "300+",   label: "Validated project records" },
   { value: "2,000+", label: "Intelligence items published annually" },
-  { value: "3",      label: "Languages at launch — English, Swahili, Amharic" },
+  { value: "3",      label: "Languages at launch: English, Swahili, Amharic" },
 ];
 
 const audiences = [
