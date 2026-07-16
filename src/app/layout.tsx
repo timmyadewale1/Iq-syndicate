@@ -16,8 +16,12 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iqsyndicate.org"),
+  alternates: {
+    canonical: "https://iqsyndicate.org",
+  },
   icons: {
     icon: "/images/favicon.png",
+    apple: "/images/favicon.png",
   },
   title: {
     default: "IQ Syndicate",
@@ -26,10 +30,28 @@ export const metadata: Metadata = {
   description:
     "IQ Syndicate is an African-led climate finance platform focused on advisory, technical assistance, blended finance, and portfolio aggregation.",
   openGraph: {
+    url: "https://iqsyndicate.org",
+    siteName: "IQ Syndicate",
     title: "IQ Syndicate",
     description:
       "Enabling African-led climate ventures to scale through patient capital and structured support.",
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/images/logo.svg",
+        width: 1200,
+        height: 630,
+        alt: "IQ Syndicate",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IQ Syndicate",
+    description:
+      "Enabling African-led climate ventures to scale through patient capital and structured support.",
+    images: ["/images/logo.svg"],
   },
 };
 
