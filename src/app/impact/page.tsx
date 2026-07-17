@@ -30,7 +30,19 @@ export const metadata: Metadata = {
   title: "Impact",
   description:
     "Every venture we support is screened, measured, and reported against internationally recognised impact standards. Impact is not a byproduct of our model, it is the reason for it.",
+  keywords: [
+    "impact measurement",
+    "SDG alignment",
+    "climate impact",
+    "sustainable development goals",
+    "impact investing Africa",
+  ],
+  alternates: {
+    canonical: "https://iqsyndicate.org/impact",
+  },
 };
+
+export const dynamic = "force-static";
 
 // Official UN SDG colours - used verbatim in the hero tiles and SDG cards
 const sdgs = [
@@ -236,6 +248,11 @@ export default function ImpactPage() {
                 and reported against internationally recognised impact
                 standards. Impact is not a byproduct of our model, it is
                 the reason for it.
+              </p>
+              <p className="mt-6 max-w-lg text-[16px] leading-7 text-white/88">
+                Learn more about the advisory and financing pathways that make this impact possible on our
+                <Link href="/services" className="font-semibold text-white underline decoration-gold-light decoration-2 underline-offset-4 hover:text-gold-light">
+                  services page</Link>.
               </p>
             </Reveal>
           </div>

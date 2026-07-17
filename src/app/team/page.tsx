@@ -9,7 +9,19 @@ export const metadata: Metadata = {
   title: "Team",
   description:
     "Meet the team behind IQ Syndicate — expertise in climate finance, platform engineering, private credit, market intelligence, and business development.",
+  keywords: [
+    "climate finance team",
+    "impact investment experts",
+    "African founders",
+    "market intelligence leaders",
+    "technical assistance specialists",
+  ],
+  alternates: {
+    canonical: "https://iqsyndicate.org/team",
+  },
 };
+
+export const dynamic = "force-static";
 
 const team = [
   { name: "Ghenzini Edet",   role: "Partner", focus: null,                                              tone: "photo-duotone-burgundy" },

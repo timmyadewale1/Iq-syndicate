@@ -29,10 +29,22 @@ import Reveal from "@/components/ui/Reveal";
 import AfricaMap from "@/components/ui/AfricaMap";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About IQ Syndicate",
   description:
     "We are a specialised climate infrastructure and advisory firm established to close the financing gap for locally led climate ventures in Africa.",
+  keywords: [
+    "climate infrastructure advisory",
+    "African impact investing",
+    "technical assistance",
+    "private credit",
+    "climate venture support",
+  ],
+  alternates: {
+    canonical: "https://iqsyndicate.org/about",
+  },
 };
+
+export const dynamic = "force-static";
 
 const modelStages = [
   {
@@ -184,6 +196,11 @@ export default function AboutPage() {
                 We are a specialised climate infrastructure and
                 advisory firm established to close the financing gap for
                 locally led climate ventures in Africa.
+              </p>
+              <p className="mt-6 max-w-md text-[15.5px] leading-7 text-ink/74">
+                Our approach combines climate advisory, technical assistance, and structured capital solutions. Explore how these services work together on our
+                <Link href="/services" className="font-semibold text-charcoal underline decoration-primary decoration-2 underline-offset-4 hover:text-primary">
+                  services page</Link>.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-7">
                 <Link

@@ -7,7 +7,19 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Our commitment to protecting your privacy. Learn how we collect, use, and safeguard your personal information.",
+  keywords: [
+    "privacy policy",
+    "data protection",
+    "personal information",
+    "information security",
+    "user privacy",
+  ],
+  alternates: {
+    canonical: "https://iqsyndicate.org/privacy",
+  },
 };
+
+export const dynamic = "force-static";
 
 const overview = [
   { icon: Lock, title: "Data Collection", body: "We collect information you provide directly and data gathered automatically when you use our website.", tone: "bg-primary text-white" },

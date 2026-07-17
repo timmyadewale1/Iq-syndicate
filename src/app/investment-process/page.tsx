@@ -27,8 +27,20 @@ import Reveal from "@/components/ui/Reveal";
 export const metadata: Metadata = {
   title: "Investment Process",
   description:
-    "our seven-step investment process progressively reduces risk while building venture value, creating a de-risked, investment-grade asset ready for commercial capital at exit.",
+    "Our seven-step investment process progressively reduces risk while building venture value, creating a de-risked, investment-grade asset ready for commercial capital at exit.",
+  keywords: [
+    "investment process",
+    "project preparation",
+    "risk management",
+    "venture readiness",
+    "climate finance due diligence",
+  ],
+  alternates: {
+    canonical: "https://iqsyndicate.org/investment-process",
+  },
 };
+
+export const dynamic = "force-static";
 
 const steps = [
   {

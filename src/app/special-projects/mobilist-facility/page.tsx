@@ -18,7 +18,19 @@ export const metadata: Metadata = {
   title: "Mobilist Facility",
   description:
     "A blended finance vehicle that transforms philanthropic capital into returnable investment, funding Africa's next generation of climate infrastructure.",
+  keywords: [
+    "blended finance",
+    "philanthropic capital",
+    "climate infrastructure",
+    "impact investing",
+    "Africa finance vehicle",
+  ],
+  alternates: {
+    canonical: "https://iqsyndicate.org/special-projects/mobilist-facility",
+  },
 };
+
+export const dynamic = "force-static";
 
 const facilityTerms = [
   { label: "Facility Type", value: "Blended finance Facility" },

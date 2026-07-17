@@ -28,7 +28,19 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Four integrated services designed to provide end-to-end support, from founder identification and project preparation through to institutional capital facilitation and exit.",
+  keywords: [
+    "climate advisory",
+    "technical assistance",
+    "blended finance",
+    "portfolio aggregation",
+    "institutional capital facilitation",
+  ],
+  alternates: {
+    canonical: "https://iqsyndicate.org/services",
+  },
 };
+
+export const dynamic = "force-static";
 
 const taModules = [
   {

@@ -20,10 +20,22 @@ import Counter from "@/components/ui/Counter";
 import HeroSlider, { type HeroSlide } from "@/components/ui/HeroSlider";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "African Climate Finance",
   description:
     "We bridge the financing gap between indigenous climate founders and institutional capital, through technical assistance, patient capital, and structured aggregation.",
+  keywords: [
+    "African climate finance",
+    "technical assistance",
+    "blended finance",
+    "portfolio aggregation",
+    "climate venture support",
+  ],
+  alternates: {
+    canonical: "https://iqsyndicate.org/",
+  },
 };
+
+export const dynamic = "force-static";
 
 const heroSlides: HeroSlide[] = [
   {
