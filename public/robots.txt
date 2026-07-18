@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iqsyndicate.org/sitemap.xml
-Host: iqsyndicate.org
+Sitemap: https://www.iqsyndicate.org/sitemap.xml
+Host: www.iqsyndicate.org
