@@ -194,7 +194,7 @@ export default function SiteFooter() {
         {/* ── Bottom bar ── */}
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[11px] uppercase tracking-[0.2em] text-white/30">
-            © {year} we. All rights reserved.
+            © {year} IQ Syndicate. All rights reserved.
           </p>
           <p className="text-[11px] uppercase tracking-[0.2em] text-white/30">
             Institutional Climate Finance Platform

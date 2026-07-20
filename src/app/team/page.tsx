@@ -27,7 +27,7 @@ const team = [
   { name: "Ghenzini Edet",   role: "Partner", focus: null,                                              tone: "photo-duotone-burgundy" },
   { name: "Gift Adaugo",     role: "Partner", focus: null,                                              tone: "photo-duotone-forest"   },
   { name: "Anietie Udoaka",  role: "Head",    focus: "Platform & Product Development",                  tone: "photo-duotone-gold"     },
-  { name: "Ilem Ukem",       role: "Head",    focus: "Risk & Private Credit",                           tone: "photo-duotone-burgundy" },
+  { name: "Francis Nwalibe", role: "Head",    focus: "Risk & Private Credit",                           tone: "photo-duotone-burgundy" },
   { name: "Regina Godwin",   role: "Lead",    focus: "Insights, Market Research & AI Intelligence",   tone: "photo-duotone-forest"   },
   { name: "James Nwefuru",   role: "Lead",    focus: "Renewable Energy Business Development",           tone: "photo-duotone-gold"     },
 ];
